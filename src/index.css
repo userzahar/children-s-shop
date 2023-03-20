@@ -16,7 +16,7 @@ a{
   color:#007bff;
   text-decoration: none;
 }
-ul{
+ul,p{
   list-style: none;
   margin: 0;
   padding: 0;
