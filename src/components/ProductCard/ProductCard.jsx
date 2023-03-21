@@ -1,7 +1,7 @@
 
-export function ProductCard ({children,productName,productPrice}) {
+export function ProductCard ({productImage,productName,productPrice}) {
     return <div className="product-card">
-        {children} 
+        <img src={productImage} alt="" /> 
         <div>
             <p>{productName}</p>
             <span>{productPrice}</span>
@@ -10,6 +10,4 @@ export function ProductCard ({children,productName,productPrice}) {
 }
 
 
-    // <ProductCard productName={"Рукавички"} productPrice={'0.33грн'}>
-    //   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQcKBJgRhvVZCBhXqNsNaP-VSnI5dWil8ZBw&usqp=CAU" alt="" />
-    //   </ProductCard>
+    // <ProductCard productName={"Рукавички"} productPrice={'0.33грн'} productImage={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQcKBJgRhvVZCBhXqNsNaP-VSnI5dWil8ZBw&usqp=CAU'} />
