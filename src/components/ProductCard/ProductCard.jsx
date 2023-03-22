@@ -22,7 +22,7 @@ export function ProductCard({ data }) {
     }, []);
 
     return <div key={data.id} className="product-card">
-        <img src={photo} alt={alt}></img>
+        <img src={photo} alt={alt} width="240px"></img>
         <div>
             <p>{data.name}</p>
             <span>{data.price}</span>
