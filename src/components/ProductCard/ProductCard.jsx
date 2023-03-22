@@ -5,13 +5,10 @@ const STOPPER = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQcKBJgRh
 export function ProductCard({ data }) {
     const [photo, setPhoto] = useState('');
     const [alt, setAlt] = useState('');
-    useEffect(()=>{if (data.photo.length === 1) {
+    useEffect(() => {
+        if (data.photo.length === 1) {
         setPhoto(data.photo[0].src)
-       
-        
         setAlt(data.photo[0].alt)
-       
-        
     } else if (data.photo.length > 1) {
         // * робим кнопки слайдера видимими вони будуть міняти setPhoto(data.photo[0][1][2]...)
         setPhoto(data.photo[0].src)
@@ -21,7 +18,7 @@ export function ProductCard({ data }) {
     }
     }, []);
 
-    return <div key={data.id} className="product-card">
+    return <div className="product-card">
         <img src={photo} alt={alt} width="240px"></img>
         <div>
             <p>{data.name}</p>
