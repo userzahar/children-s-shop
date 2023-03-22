@@ -1,7 +1,13 @@
 import { FooterDiv } from "./Footer.styled";
+import { PageContainer } from "components/pageContainer/pageContainer";
 
 export function Footer() {
     return (
-        <FooterDiv>It`s footer</FooterDiv>
+        <FooterDiv>
+            <PageContainer> zdgdhj
+
+            </PageContainer>
+           
+        </FooterDiv>
     );
 };
