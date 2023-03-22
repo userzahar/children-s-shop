@@ -18,13 +18,13 @@ export function ProductCard({ data }) {
     }
     }, []);
 
-    return <div className="product-card">
+    return <li className="product-card">
         <img src={photo} alt={alt} width="240px"></img>
         <div>
             <p>{data.name}</p>
             <span>{data.price}</span>
         </div>
-    </div>
+    </li>
 }
 
     // <ProductCard data={{
