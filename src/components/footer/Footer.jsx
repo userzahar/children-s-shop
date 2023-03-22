@@ -1,5 +1,7 @@
+import { FooterDiv } from "./Footer.styled";
+
 export function Footer() {
     return (
-        <div>It`s footer</div>
+        <FooterDiv>It`s footer</FooterDiv>
     );
 };
