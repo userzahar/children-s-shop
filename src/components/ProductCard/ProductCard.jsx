@@ -1,11 +1,28 @@
-import { ProductImage } from "components/ProductImage/ProductImage"
-
+import { useEffect } from "react";
+import { useState } from "react"
+const STOPPER = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQcKBJgRhvVZCBhXqNsNaP-VSnI5dWil8ZBw&usqp=CAU"
 
 export function ProductCard({ data }) {
-    
+    const [photo, setPhoto] = useState('');
+    const [alt, setAlt] = useState('');
+    useEffect(()=>{if (data.photo.length === 1) {
+        setPhoto(data.photo[0].src)
+       
+        
+        setAlt(data.photo[0].alt)
+       
+        
+    } else if (data.photo.length > 1) {
+        // * робим кнопки слайдера видимими вони будуть міняти setPhoto(data.photo[0][1][2]...)
+        setPhoto(data.photo[0].src)
+        setAlt(data.photo[0].alt)
+    } else {
+        setPhoto(STOPPER)
+    }
+    }, []);
 
     return <div key={data.id} className="product-card">
-        <ProductImage images={data.photo}/>
+        <img src={photo} alt={alt}></img>
         <div>
             <p>{data.name}</p>
             <span>{data.price}</span>
