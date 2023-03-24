@@ -51,15 +51,15 @@ export function ProductCard({ data }) {
     </li>
 }
 
-    <ProductCard data={{
-        name: "Сенсорні кульки",
-        id: "id-9",
-        price: 150,
-      photo: [
+    // <ProductCard data={{
+    //     name: "Сенсорні кульки",
+    //     id: "id-9",
+    //     price: 150,
+    //   photo: [
         
-            {src:"https://content2.rozetka.com.ua/goods/images/big/280916356.jpg", alt:"невалідна картинка"}, 
-            {src:"https://i.ibb.co/V3CCZN8/photo-2023-03-15-19-48-43-6.jpg", alt:"валідна картинка"}
-    ],
-        category: ["Іграшки"],
-        description: ""
-    } } />
+    //         {src:"https://content2.rozetka.com.ua/goods/images/big/280916356.jpg", alt:"невалідна картинка"}, 
+    //         {src:"https://i.ibb.co/V3CCZN8/photo-2023-03-15-19-48-43-6.jpg", alt:"валідна картинка"}
+    // ],
+    //     category: ["Іграшки"],
+    //     description: ""
+    // } } />
