@@ -1,4 +1,4 @@
-import { ProductCardContainer, ProductImage } from "./ProductCard.styled";
+import { ButtonThumb, ImageThumb, ProductCardContainer, ProductImage } from "./ProductCard.styled";
 
 const STOPPER = "https://media.licdn.com/dms/image/C560BAQGS7sdpNYWnEA/company-logo_200_200/0/1612902438159?e=2147483647&v=beta&t=w1NqDOjYxZIEsMXd2AQQF0IXHmoxmEuP3rYsKG_Vfdk"
 
@@ -26,11 +26,14 @@ export function ProductCard({ data }) {
     }
 
     return <ProductCardContainer className="product-card">
+        <ImageThumb className="image-thumb">
         <ProductImage src={srcImg} alt={altImg}  height="300px"></ProductImage>
-        {photo.length > 1 && <div className="button-thumb">
-            <button type="button" onClick={hendleButton} name='left'>left</button>
-            <button type="button" onClick={hendleButton} name='right'>right</button>
-        </div>}
+            {photo.length > 1 &&
+                <ButtonThumb className="button-thumb">
+                    <button type="button" onClick={hendleButton} name='left'>left</button>
+                    <button type="button" onClick={hendleButton} name='right'>right</button>
+                </ButtonThumb>}
+        </ImageThumb>
         <div>
             <p>{name}</p>
             <span>{price} грн</span>
