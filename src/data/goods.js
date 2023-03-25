@@ -70,10 +70,7 @@ export const goods = [
         name: "Боді з довгим рукавом",
         id: "id-7",
         price: 130,
-        photo: [
-            {src:"", alt:""}, 
-            {src:"", alt:""}
-    ],
+        photo: [],
         category: [],
         description: "Колір: рожевий синій, зелений. Розмір 86."
     },
@@ -84,7 +81,6 @@ export const goods = [
         price: 73,
         photo: [
             {src:"https://i.ibb.co/MRN9Q1m/photo-2023-03-15-19-48-43-7.jpg", alt:"Пелюшки баєві"}, 
-            {src:"", alt:""}
     ],
         category: ["текстиль"],
         description: "Розмір 80/90"

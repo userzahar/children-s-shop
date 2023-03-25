@@ -1,3 +1,4 @@
+import { ProductCardContainer, ProductImage } from "./ProductCard.styled";
 
 const STOPPER = "https://media.licdn.com/dms/image/C560BAQGS7sdpNYWnEA/company-logo_200_200/0/1612902438159?e=2147483647&v=beta&t=w1NqDOjYxZIEsMXd2AQQF0IXHmoxmEuP3rYsKG_Vfdk"
 
@@ -10,6 +11,7 @@ export function ProductCard({ data }) {
         altImg = photo[0].alt
     } else if (photo.length > 1) {
  // * тут буде слайдер
+        
         srcImg = photo[1].src
         altImg = photo[1].alt
     } else {
@@ -23,18 +25,19 @@ export function ProductCard({ data }) {
          else{console.log('права кнопка')}
     }
 
-    return <li className="product-card">
-        <img src={srcImg} alt={altImg} width="240px" height="300px"></img>
-        {photo.length > 1 && <>
-            {<button type="button" onClick={hendleButton} name='left'>left</button>}
+    return <ProductCardContainer className="product-card">
+        <ProductImage src={srcImg} alt={altImg}  height="300px"></ProductImage>
+        {photo.length > 1 && <div className="button-thumb">
+            <button type="button" onClick={hendleButton} name='left'>left</button>
             <button type="button" onClick={hendleButton} name='right'>right</button>
-        </>}
+        </div>}
         <div>
             <p>{name}</p>
             <span>{price} грн</span>
         </div>
-    </li>
+    </ProductCardContainer>
 }
+
 
     // <ProductCard data={{
     //     name: "Сенсорні кульки",
