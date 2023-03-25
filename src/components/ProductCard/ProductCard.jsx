@@ -1,52 +1,37 @@
-import { SliderButton } from "components/SliderButton/SliderButton";
-import { useEffect } from "react";
-import { useState } from "react"
 
-const STOPPER = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQcKBJgRhvVZCBhXqNsNaP-VSnI5dWil8ZBw&usqp=CAU"
+const STOPPER = "https://media.licdn.com/dms/image/C560BAQGS7sdpNYWnEA/company-logo_200_200/0/1612902438159?e=2147483647&v=beta&t=w1NqDOjYxZIEsMXd2AQQF0IXHmoxmEuP3rYsKG_Vfdk"
 
 export function ProductCard({ data }) {
-    const [photo, setPhoto] = useState('');
-    const [alt, setAlt] = useState('');
-    const [photoID, setPhotoID] = useState(0);
-    const [showBtn, setShowBtn]=useState(false)
-    useEffect(() => {
-        if (data.photo.length === 1) {
-            setPhoto(() => {
-                if (data.photo[0].src === '')
-                    return STOPPER;
-                return data.photo[0].src
-            })
-        setAlt(data.photo[0].alt)
-    } else if (data.photo.length > 1) {
-        setShowBtn(true);
-        setPhoto(data.photo[0].src)
-        setAlt(data.photo[0].alt)    
+    const { name, price, photo } = data;
+    let srcImg = '';
+    let altImg = '';
+    if (photo.length === 1) {
+        srcImg = photo[0].src
+        altImg = photo[0].alt
+    } else if (photo.length > 1) {
+ // * тут буде слайдер
+        srcImg = photo[1].src
+        altImg = photo[1].alt
     } else {
-        setPhoto(STOPPER)
+        srcImg = STOPPER;
+        altImg = '';
     }
-    }, []);
-    useEffect(() => {
-        setPhoto(data.photo[photoID].src)
-        setAlt(data.photo[photoID].alt) 
-    },[photoID])
+    const hendleButton = ({ target }) => {
+        if (target.name === 'left') {
+            console.log('ліва кнопка')
+        }
+         else{console.log('права кнопка')}
+    }
 
-    const previousSlide = () => {
-    setPhotoID(state=>state - 1);
-    };
-    const nextSlide = () => {
-    setPhotoID(state=>state + 1);
-    };
-    
-    
     return <li className="product-card">
-        <img src={photo} alt={alt} width="240px" height="300px"></img>
-        {showBtn && <>
-            <SliderButton direction="left" onClick={previousSlide} />
-            <SliderButton direction="right" onClick={nextSlide} />
+        <img src={srcImg} alt={altImg} width="240px" height="300px"></img>
+        {photo.length > 1 && <>
+            {<button type="button" onClick={hendleButton} name='left'>left</button>}
+            <button type="button" onClick={hendleButton} name='right'>right</button>
         </>}
         <div>
-            <p>{data.name}</p>
-            <span>{data.price} грн</span>
+            <p>{name}</p>
+            <span>{price} грн</span>
         </div>
     </li>
 }
@@ -63,3 +48,36 @@ export function ProductCard({ data }) {
     //     category: ["Іграшки"],
     //     description: ""
     // } } />
+    
+    //  const [photo, setPhoto] = useState('');
+    // const [alt, setAlt] = useState('');
+    // const [photoID, setPhotoID] = useState(0);
+    // const [showBtn, setShowBtn]=useState(false)
+    // useEffect(() => {
+    //     if (data.photo.length === 1) {
+    //         setPhoto(() => {
+    //             if (data.photo[0].src === '')
+    //                 return STOPPER;
+    //             return data.photo[0].src
+    //         })
+    //     setAlt(data.photo[0].alt)
+    // } else if (data.photo.length > 1) {
+    //     setShowBtn(true);
+    //     setPhoto(data.photo[0].src)
+    //     setAlt(data.photo[0].alt)    
+    // } else {
+    //     setPhoto(STOPPER)
+    // }
+    // }, []);
+    // useEffect(() => {
+    //     setPhoto(data.photo[photoID].src)
+    //     setAlt(data.photo[photoID].alt) 
+    // },[photoID])
+
+    // const previousSlide = () => {
+    // setPhotoID(state=>state - 1);
+    // };
+    // const nextSlide = () => {
+    // setPhotoID(state=>state + 1);
+    // };
+    
