@@ -19,6 +19,7 @@ export const ProductCardContainer = styled.li`
 
 export const ProductImage = styled.img`
   width: 100%;
+  object-fit: cover;
 `;
 export const ImageThumb = styled.div`
   position: relative;
