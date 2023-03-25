@@ -36,7 +36,7 @@ export function ProductCard({ data }) {
         </ImageThumb>
         <div>
             <p>{name}</p>
-            <span>{price} грн</span>
+            <span>{price} грн.</span>
         </div>
     </ProductCardContainer>
 }

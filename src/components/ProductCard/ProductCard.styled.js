@@ -2,37 +2,47 @@ const { default: styled } = require('@emotion/styled');
 
 export const ProductCardContainer = styled.li`
   display: flex;
-  background-color: cadetblue;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: space-between;
+  text-align: center;
   border-radius: 8px;
-  //desctop version styled 👇
-  width: calc((100% - 12px) / 4);
-  margin-bottom: 4px;
-  &:not(:first-of-type) {
-    margin-left: 4px;
-  }
-  //desctop version styled 👆
+  background-color: cadetblue;
+  height: 340px;
+  margin: 4px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  //!desctop version styled 👇
+  width: calc((100% - 192px) / 4);
+  //!desctop version styled 👆
 `;
 
 export const ProductImage = styled.img`
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
-  -webkit-user-select: none;
-  user-select: none;
-  pointer-events: none;
-  height: auto !important;
-  z-index: 1;
-  color: transparent;
+  width: 100%;
 `;
 export const ImageThumb = styled.div`
   position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
 `;
 export const ButtonThumb = styled.div`
   position: absolute;
-  top: 55%;
+  top: 1px;
   width: 100%;
+  height: 100%;
+  opacity: 0.3;
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  & > button {
+    height: 30px;
+  }
+  &:hover {
+    opacity: 1;
+  }
 `;
