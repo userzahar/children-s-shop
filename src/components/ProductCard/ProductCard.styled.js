@@ -5,7 +5,6 @@ export const ProductCardContainer = styled.li`
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  text-align: center;
   border-radius: 8px;
   background-color: cadetblue;
   height: 340px;
