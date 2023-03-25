@@ -4,10 +4,13 @@ const breakpoints = {
     desktop: '1200px',
 };
 
+//desktop-first
 export const device = {
-    Mobile: `max-width: ${breakpoints.tablet}`,
-    Tablet: `min-width: ${breakpoints.tablet} and max-width: ${breakpoints.desktop}`,
-    Desktop: `min-width: ${breakpoints.desktop}`,
-    smallerThanDesktop: `max-width: ${breakpoints.desktop}`,
-    biggerThanMobile: `min-width: ${breakpoints.tablet}`
+    desktop: `screen and min-width: ${breakpoints.desktop}`,
+    tablet: `screen and max-width: ${breakpoints.desktop}`,
+    onlyTablet: `screen and min-width: ${breakpoints.tablet} and max-width: ${breakpoints.desktop}`,
+    biggerThanMobile: `screen and min-width: ${breakpoints.tablet}`,
+    mobile: `screen and max-width: ${breakpoints.tablet}`,
+    smallerThanMobile: `screen and max-width: ${breakpoints.mobile}`,
+
 };

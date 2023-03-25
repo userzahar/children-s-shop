@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { device } from "utils/mediaVariables";
 
 export const PageContainerDiv = styled.div`
     margin: 0 auto;
@@ -9,15 +10,15 @@ export const PageContainerDiv = styled.div`
     padding-left: 15px;
     padding-right: 15px;
 
-    @media screen and (max-width: 1200px){
+    @media ${device.tablet} {
         max-width: 768px;
     }
 
-    @media screen and (max-width: 768px){
+    @media ${device.mobile}{
         max-width: 480px;
     }
 
-    @media screen and (max-width: 480px){
+    @media ${device.smallerThanMobile}{
         width: 100%;
     }
     //
