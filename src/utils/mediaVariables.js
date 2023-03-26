@@ -13,5 +13,3 @@ export const device = Object.freeze({
     mobile: `@media screen and (max-width: ${breakpoints.tablet})`,
     smallerThanMobile: `@media screen and (max-width: ${breakpoints.mobile})`,
 });
-
-export const mediaQuery = Object.values(device);

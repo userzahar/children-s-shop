@@ -11,7 +11,7 @@ export const FooterTag = styled.footer`
   background-color: rgb(3, 169, 161);
   //
 
-  @media ${device.mobile} {
+  ${device.mobile} {
     position: static;
   }
 
@@ -27,7 +27,7 @@ export const AddressTag = styled.address`
   color: white;
   //
 
-  @media ${device.mobile} {
+  ${device.mobile} {
     flex-direction: column;
   }
 
