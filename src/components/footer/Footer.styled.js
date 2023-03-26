@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { device } from "utils/mediaVariables";
+import { device } from "utils/mediaQueries";
 
 
 export const FooterTag = styled.footer`
