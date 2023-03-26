@@ -1,55 +1,32 @@
-//вкладаємо максимум 1 об'єкт в об'єкт теми
 //кольори використовуємо в styled файлах:
 //background-color: ${props => (props.theme.footer.backgroundColor)};
 
-
 class Theme {
-    constructor(
-        /* header = {
+    constructor({header, main, footer}) {
+
+        this.header = header ?? {
             
-        }, 
-        main = {
-            
-        },  */
-        footer = {
+        };
+
+        this.main = main ?? {
+
+        };
+
+        this.footer = footer ?? {
             backgroundColor: "rgb(3, 169, 161)",
-        }
-    ) {
-        //this.header = header;
-        //this.main = main;
-        this.footer = footer;
+            textColor: "white",
+        };
     }
 }
 
 //світла тема дефолтна
-export const light = new Theme(
-    /* header: {},
-    main: {}, */
-    {
-        backgroundColor: "black",
-    }
-);
+export const light = new Theme({});
 
-//створення темної теми
-export const dark = new Theme();
-
-
-/* export const light = Object.freeze({
-    header: {
-
-    },
-
-    main: {
-
-    },
-
+export const dark = new Theme({
+    //header: {},
+    //main: {},
     footer: {
-      backgroundColor: "rgb(3, 169, 161)",
+        backgroundColor: "black",
+        textColor: "white",
     }
 });
-  
-export const dark = Object.freeze({
-    footer: {
-      backgroundColor: "black",
-    }
-}); */
