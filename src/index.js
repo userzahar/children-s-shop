@@ -4,9 +4,14 @@ import { ThemeProvider } from '@emotion/react';
 import { App } from 'components/App';
 import './index.css';
 
+const theme = Object.freeze({
+  
+});
+
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <ThemeProvider>
+    <ThemeProvider theme={theme}>
       <App />
     </ThemeProvider>
   </React.StrictMode>

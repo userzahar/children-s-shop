@@ -1,6 +1,10 @@
 import styled from "@emotion/styled";
 import { device } from "utils/mediaVariables";
 
+const breakpoints = [480, 768, 1200]
+
+const mediaQuery = breakpoints.map(bp => `@media (max-width: ${bp}px)`)
+
 export const PageContainerDiv = styled.div`
     margin: 0 auto;
 
@@ -10,6 +14,10 @@ export const PageContainerDiv = styled.div`
     padding-left: 15px;
     padding-right: 15px;
 
+    ${mediaQuery[2]} {
+        max-width: 768px;
+        display: none;
+    }
     @media ${device.tablet} {
         max-width: 768px;
     }
