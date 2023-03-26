@@ -6,10 +6,12 @@ const breakpoints = Object.freeze({
 
 //desktop-first
 export const device = Object.freeze({
-    desktop: `screen and min-width: ${breakpoints.desktop}`,
-    tablet: `screen and max-width: ${breakpoints.desktop}`,
-    onlyTablet: `screen and min-width: ${breakpoints.tablet} and max-width: ${breakpoints.desktop}`,
-    biggerThanMobile: `screen and min-width: ${breakpoints.tablet}`,
-    mobile: `screen and max-width: ${breakpoints.tablet}`,
-    smallerThanMobile: `screen and max-width: ${breakpoints.mobile}`,
+    desktop: `@media screen and (min-width: ${breakpoints.desktop})`,
+    tablet: `@media screen and (max-width: ${breakpoints.desktop})`,
+    onlyTablet: `@media screen and (min-width: ${breakpoints.tablet}) and (max-width: ${breakpoints.desktop})`,
+    biggerThanMobile: `@media screen and (min-width: ${breakpoints.tablet})`,
+    mobile: `@media screen and (max-width: ${breakpoints.tablet})`,
+    smallerThanMobile: `@media screen and (max-width: ${breakpoints.mobile})`,
 });
+
+export const mediaQuery = Object.values(device);
