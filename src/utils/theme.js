@@ -4,21 +4,34 @@
 
 
 class Theme {
-    constructor(header, main, footer) {
-        this.header = {
-
-        };
-        this.main = {
-
-        };
-        this.footer = {
+    constructor(
+        /* header = {
+            
+        }, 
+        main = {
+            
+        },  */
+        footer = {
             backgroundColor: "rgb(3, 169, 161)",
-          };
+        }
+    ) {
+        //this.header = header;
+        //this.main = main;
+        this.footer = footer;
     }
 }
 
-export const light = new Theme();
+//світла тема дефолтна
+export const light = new Theme(
+    /* header: {},
+    main: {}, */
+    {
+        backgroundColor: "black",
+    }
+);
 
+//створення темної теми
+export const dark = new Theme();
 
 
 /* export const light = Object.freeze({

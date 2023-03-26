@@ -8,6 +8,7 @@ export const FooterTag = styled.footer`
 
   //коли будуть теми зробити імпорт кольору
   background-color: ${props => (props.theme.footer.backgroundColor)};
+  ${props => console.log(props.theme)}
   //
 
   ${device.mobile} {
