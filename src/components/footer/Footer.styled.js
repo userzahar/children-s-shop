@@ -1,19 +1,16 @@
 import styled from '@emotion/styled';
+import { device } from "utils/mediaQueries";
 
 export const FooterTag = styled.footer`
   width: 100%;
   position: fixed;
   bottom: 0;
+  background-color: ${props => (props.theme.footer.backgroundColor)};
 
-  //коли будуть теми зробити імпорт кольору
-  background-color: rgb(3, 169, 161);
-  //
-
-  //медіазапити переписати під уніфіковані
-  @media screen and (max-width: 768px) {
+  ${device.mobile} {
     position: static;
   }
-  //
+
 `;
 
 export const AddressTag = styled.address`
@@ -21,14 +18,10 @@ export const AddressTag = styled.address`
   justify-content: space-between;
   align-items: center;
   min-height: 40px;
+  color: ${props => (props.theme.footer.textColor)};
 
-  //коли будуть теми зробити імпорт кольору
-  color: white;
-  //
-
-  //медіазапити переписати під уніфіковані
-  @media screen and (max-width: 768px) {
+  ${device.mobile} {
     flex-direction: column;
   }
-  //
+
 `;

@@ -1,24 +1,21 @@
 import styled from "@emotion/styled";
+import { device } from "utils/mediaQueries";
 
 export const PageContainerDiv = styled.div`
     margin: 0 auto;
-
-    //переписати під актуальні медіаправила використовуючи змінні (або іншу вибрану стратегію), 
-    //коли робитиметься адаптив під мобілку і планшет
     width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
 
-    @media screen and (max-width: 1200px){
+    ${device.tablet} {
         max-width: 768px;
     }
 
-    @media screen and (max-width: 768px){
+    ${device.mobile}{
         max-width: 480px;
     }
 
-    @media screen and (max-width: 480px){
+    ${device.smallerThanMobile}{
         width: 100%;
     }
-    //
 `;
