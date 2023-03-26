@@ -1,14 +1,13 @@
 import styled from '@emotion/styled';
 import { device } from "utils/mediaQueries";
 
-
 export const FooterTag = styled.footer`
   width: 100%;
   position: fixed;
   bottom: 0;
 
   //коли будуть теми зробити імпорт кольору
-  background-color: rgb(3, 169, 161);
+  background-color: ${props => (props.theme.footer.backgroundColor)};
   //
 
   ${device.mobile} {
