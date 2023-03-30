@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/children-s-shop/static/css/main.2c916e5d.css",
-    "main.js": "/children-s-shop/static/js/main.5538d1b8.js",
+    "main.js": "/children-s-shop/static/js/main.9b64707a.js",
     "index.html": "/children-s-shop/index.html",
     "main.2c916e5d.css.map": "/children-s-shop/static/css/main.2c916e5d.css.map",
-    "main.5538d1b8.js.map": "/children-s-shop/static/js/main.5538d1b8.js.map"
+    "main.9b64707a.js.map": "/children-s-shop/static/js/main.9b64707a.js.map"
   },
   "entrypoints": [
     "static/css/main.2c916e5d.css",
-    "static/js/main.5538d1b8.js"
+    "static/js/main.9b64707a.js"
   ]
 }
