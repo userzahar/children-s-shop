@@ -5,7 +5,8 @@ class Theme {
     constructor({header, main, footer}) {
 
         this.header = header ?? {
-            
+            backgroundColor: "rgb(3, 169, 161)",
+            textColor: "white",
         };
 
         this.main = main ?? {
@@ -23,7 +24,10 @@ class Theme {
 export const light = new Theme({});
 
 export const dark = new Theme({
-    //header: {},
+    header: {
+        backgroundColor: "black",
+        textColor: "white",
+    },
     //main: {},
     footer: {
         backgroundColor: "black",
