@@ -17,7 +17,7 @@ export function ProductCard({ data }) {
 
     return <ProductCardContainer >
         <ImageThumb>
-        {photo[pictureNumber]?<ProductImage src={data.photo[pictureNumber]?.src} alt={data.photo[pictureNumber]?.alt}  height="300px"></ProductImage> : <StopperImage/>}
+        {photo[0]?<ProductImage src={data.photo[pictureNumber]?.src} alt={data.photo[pictureNumber]?.alt}  height="300px"/> : <StopperImage/>}
             {photo.length > 1 &&
                 <ButtonThumb >
                     <button type="button" onClick={hendleButton} name='left'>left</button>
