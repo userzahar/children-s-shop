@@ -8,7 +8,6 @@ export function ProductCard({ data }) {
     const [pictureNumber, setPictureNumber] = useState(0);
     console.log("setPictureNumber:", setPictureNumber);
     const { name, price, photo, category } = data;
-
     const hendleButton = ({ target }) => {
         if (target.name === 'left') {
             console.log('ліва кнопка')
@@ -18,7 +17,7 @@ export function ProductCard({ data }) {
 
     return <ProductCardContainer >
         <ImageThumb>
-        {photo[pictureNumber]?<ProductImage src={photo[pictureNumber]?.src} alt={photo[pictureNumber]?.alt}  height="300px"></ProductImage> : <StopperImage/>}
+        {photo[pictureNumber]?<ProductImage src={data.photo[pictureNumber]?.src} alt={data.photo[pictureNumber]?.alt}  height="300px"></ProductImage> : <StopperImage/>}
             {photo.length > 1 &&
                 <ButtonThumb >
                     <button type="button" onClick={hendleButton} name='left'>left</button>
