@@ -15,24 +15,29 @@ export const ProductCardContainer = styled.li`
   background-color: #ffffff;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 
-  max-width: 480px;
-  @media screen and (min-width: 767px) {
-    width: calc((100% - 96px) / 2);
-  }
-  @media screen and (min-width: 1200px) {
-    width: calc((100% - 192px) / 4);
-  }
+  width: calc((100% - 192px) / 4);
+
   &:hover {
     transform: translate(0, -5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     background-color: #fff593;
   }
+  @media (max-width: 1200px) {
+    width: calc((100% - 96px) / 2);
+  }
+  @media (max-width: 992px) {
+    width: calc((100% - 96px) / 2);
+  }
+  @media (max-width: 768px) {
+    width: 480px;
+  }
 `;
 
 export const ProductImage = styled.img`
+  position: absolute;
   width: 100%;
-  height: 100%;
   border-radius: 10px;
+  top: 0px;
 `;
 export const ImageThumb = styled.div`
   position: relative;
@@ -58,4 +63,9 @@ export const ButtonThumb = styled.div`
   &:hover {
     opacity: 1;
   }
+`;
+
+export const InfoCard = styled.div`
+  display: flex;
+  flex-direction: column;
 `;

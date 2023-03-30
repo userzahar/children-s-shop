@@ -6,6 +6,7 @@ body {
   line-height: 1.5em;
   background-color: #fff;
   color: #333;
+
 }
 h1, h2, h3 {
   font-weight: bold;
@@ -29,3 +30,7 @@ code {
 img{
   display: block;
 }
+/* #root{
+  background-image: url('../public/children-s-background.png');
+  background-position: 50% 50%;
+} */
