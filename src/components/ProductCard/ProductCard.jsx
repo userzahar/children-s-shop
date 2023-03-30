@@ -1,7 +1,8 @@
 import { ButtonThumb, ImageThumb, ProductCardContainer, ProductImage } from "./ProductCard.styled";
 import PropTypes from 'prop-types';
 import { useState } from "react";
-const STOPPER ="https://media.licdn.com/dms/image/C560BAQGS7sdpNYWnEA/company-logo_200_200/0/1612902438159?e=2147483647&v=beta&t=w1NqDOjYxZIEsMXd2AQQF0IXHmoxmEuP3rYsKG_Vfdk"
+const STOPPER = "https://via.placeholder.com/250x290"
+
 
 export function ProductCard({ data }) {
     const [pictureNumber, setPictureNumber] = useState(0);
@@ -16,7 +17,9 @@ export function ProductCard({ data }) {
 
     return <ProductCardContainer >
         <ImageThumb>
+            <div className="img_thumb">
         {<ProductImage src={photo[0]? photo[pictureNumber]?.src : STOPPER} alt={photo[pictureNumber]?.alt}  height="300px"/>}
+            </div>
             {photo.length > 1 &&
                 <ButtonThumb >
                     <button type="button" onClick={hendleButton} name='left'>left</button>

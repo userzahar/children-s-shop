@@ -1,5 +1,7 @@
-const { default: styled } = require('@emotion/styled');
+import { device } from '../../utils/mediaQueries';
+console.log('🚀 ~ device:', device);
 
+const { default: styled } = require('@emotion/styled');
 export const ProductCardContainer = styled.li`
   display: flex;
   flex-direction: column;
@@ -12,6 +14,11 @@ export const ProductCardContainer = styled.li`
   padding: 20px;
   background-color: #ffffff;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  &:hover {
+    transform: translate(0, -5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    background-color: #fff593;
+  }
   //!desctop version styled 👇
   width: calc((100% - 192px) / 4);
   //!desctop version styled 👆
@@ -19,7 +26,8 @@ export const ProductCardContainer = styled.li`
 
 export const ProductImage = styled.img`
   width: 100%;
-  object-fit: cover;
+  height: 100%;
+  border-radius: 10px;
 `;
 export const ImageThumb = styled.div`
   position: relative;
