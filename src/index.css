@@ -30,7 +30,10 @@ code {
 img{
   display: block;
 }
-/* #root{
+#root{
   background-image: url('../public/children-s-background.png');
-  background-position: 50% 50%;
-} */
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: 50% 100%;
+  background-attachment:fixed;
+}
