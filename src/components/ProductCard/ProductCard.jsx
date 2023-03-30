@@ -25,8 +25,8 @@ export function ProductCard({ data }) {
         </ImageThumb>
         <div>
             <p>{name}</p>
-            {category.length !== 0 && <p> Категорії: {category.join(' ')}</p>}
-            <span>{price} грн.</span>
+            {category.length !== 0 && <a href='/'> Категорії: {category.join(' ')}</a>}
+            <span>    {price} грн.</span>
         </div>
     </ProductCardContainer>
 }
