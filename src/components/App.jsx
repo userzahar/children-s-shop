@@ -1,14 +1,18 @@
 
 import { goods } from "data/goods";
 import { Footer } from "./footer/Footer";
-import { Gallery } from "./Gallery/Gallery";
+import { GalleryProducts } from "./GalleryProducts/GalleryProducts";
+import { Main } from "./Main/Main";
 import { PageContainer } from "./pageContainer/pageContainer";
+
 export const App = () => {
-  return (<div>
-    <PageContainer>
-      <Gallery goods={goods} />
-    </PageContainer>
-    
+  return (<>
+    <Main>
+      <PageContainer>
+        <GalleryProducts goodsItem={goods} />
+      </PageContainer>
+    </Main>
+  
     <Footer />
-  </div>);
+  </>);
 };

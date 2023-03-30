@@ -1,23 +1,14 @@
 import { ButtonThumb, ImageThumb, ProductCardContainer, ProductImage } from "./ProductCard.styled";
+import PropTypes from 'prop-types';
+import { useState } from "react";
+import { StopperImage } from "components/StopperImage/StopperImage";
 
-const STOPPER = "https://media.licdn.com/dms/image/C560BAQGS7sdpNYWnEA/company-logo_200_200/0/1612902438159?e=2147483647&v=beta&t=w1NqDOjYxZIEsMXd2AQQF0IXHmoxmEuP3rYsKG_Vfdk"
 
 export function ProductCard({ data }) {
-    const { name, price, photo } = data;
-    let srcImg = '';
-    let altImg = '';
-    if (photo.length === 1) {
-        srcImg = photo[0].src
-        altImg = photo[0].alt
-    } else if (photo.length > 1) {
- // * тут буде слайдер
-        
-        srcImg = photo[1].src
-        altImg = photo[1].alt
-    } else {
-        srcImg = STOPPER;
-        altImg = '';
-    }
+    const [pictureNumber, setPictureNumber] = useState(0);
+    console.log("setPictureNumber:", setPictureNumber);
+    const { name, price, photo, category } = data;
+
     const hendleButton = ({ target }) => {
         if (target.name === 'left') {
             console.log('ліва кнопка')
@@ -25,20 +16,25 @@ export function ProductCard({ data }) {
          else{console.log('права кнопка')}
     }
 
-    return <ProductCardContainer className="product-card">
-        <ImageThumb className="image-thumb">
-        <ProductImage src={srcImg} alt={altImg}  height="300px"></ProductImage>
+    return <ProductCardContainer >
+        <ImageThumb>
+        {photo[pictureNumber]?<ProductImage src={photo[pictureNumber]?.src} alt={photo[pictureNumber]?.alt}  height="300px"></ProductImage> : <StopperImage/>}
             {photo.length > 1 &&
-                <ButtonThumb className="button-thumb">
+                <ButtonThumb >
                     <button type="button" onClick={hendleButton} name='left'>left</button>
                     <button type="button" onClick={hendleButton} name='right'>right</button>
                 </ButtonThumb>}
         </ImageThumb>
         <div>
             <p>{name}</p>
+            <p>{category.join(' ')}</p>
             <span>{price} грн.</span>
         </div>
     </ProductCardContainer>
+}
+
+ProductCard.propTypes ={
+    data: PropTypes.object,
 }
 
 
