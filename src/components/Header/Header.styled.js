@@ -18,7 +18,7 @@ export const CoverDiv = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 40px;
+  min-height: 50px;
   color: ${props => (props.theme.header.textColor)};
 
   ${device.mobile} {
