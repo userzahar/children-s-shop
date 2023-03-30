@@ -36,6 +36,8 @@ export const ProductCardContainer = styled.li`
 export const ProductImage = styled.img`
   position: absolute;
   width: 100%;
+  height: 246px;
+  object-fit: cover;
   border-radius: 10px;
   top: 0px;
 `;
