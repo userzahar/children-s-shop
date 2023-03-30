@@ -14,14 +14,19 @@ export const ProductCardContainer = styled.li`
   padding: 20px;
   background-color: #ffffff;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+  max-width: 480px;
+  @media screen and (min-width: 767px) {
+    width: calc((100% - 96px) / 2);
+  }
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 192px) / 4);
+  }
   &:hover {
     transform: translate(0, -5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     background-color: #fff593;
   }
-  //!desctop version styled 👇
-  width: calc((100% - 192px) / 4);
-  //!desctop version styled 👆
 `;
 
 export const ProductImage = styled.img`
