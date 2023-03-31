@@ -7,8 +7,13 @@ import { Main } from "./Main/Main";
 import { PageContainer } from "./pageContainer/pageContainer";
 
 export const App = () => {
+
+  const themeSwitcher = () => {
+    console.log('theme');
+  };
+
   return (<>
-    <Header />
+    <Header themeSwitcher={themeSwitcher}/>
     <Main>
       <PageContainer>
         <GalleryProducts goodsItem={goods} />
