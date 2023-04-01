@@ -34,19 +34,15 @@ export const ProductCardContainer = styled.li`
 `;
 
 export const ProductImage = styled.img`
-  position: absolute;
   width: 100%;
-  height: 246px;
-  object-fit: cover;
-  border-radius: 10px;
-  top: 0px;
+  object-fit: contain;
 `;
 export const ImageThumb = styled.div`
   position: relative;
   display: flex;
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: 80%;
   overflow: hidden;
   border-radius: 10px;
 `;
@@ -70,4 +66,7 @@ export const ButtonThumb = styled.div`
 export const InfoCard = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  height: 24%;
+  width: 100%;
 `;
