@@ -11,11 +11,10 @@ import { ThemeProvider } from "@emotion/react";
 import { light } from "utils/theme";
 
 export const App = () => {
-console.log(Theme().type);
   const themeSwitcher = () => {
     console.log('theme');
   };
-const theme = useContext(ThemeContext).type;
+const theme = useContext(ThemeContext).theme;
   return (<>
   <ThemeProvider theme={theme}>
     <Header themeSwitcher={themeSwitcher}/>
