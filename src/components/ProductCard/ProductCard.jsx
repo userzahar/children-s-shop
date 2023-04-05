@@ -1,7 +1,7 @@
 import { ButtonThumb, ImageThumb, ProductCardContainer, ProductImage, InfoCard } from "./ProductCard.styled";
 import PropTypes from 'prop-types';
 import { useState } from "react";
-const STOPPER = "https://via.placeholder.com/250x290"
+const STOPPER = "https://wellesleysocietyofartists.org/wp-content/uploads/2015/11/image-not-found.jpg"
 
 
 export function ProductCard({ data }) {
