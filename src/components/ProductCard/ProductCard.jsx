@@ -6,7 +6,7 @@ const STOPPER = "https://via.placeholder.com/250x290"
 
 export function ProductCard({ data }) {
     const [pictureNumber, setPictureNumber] = useState(0);
-    console.log("setPictureNumber:", setPictureNumber);
+    //console.log("setPictureNumber:", setPictureNumber);
     const { name, price, photo, category } = data;
     const hendleButton = ({ target }) => {
         if (target.name === 'left') {

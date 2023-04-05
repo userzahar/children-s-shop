@@ -5,7 +5,7 @@ export const HeaderTag = styled.footer`
   width: 100%;
   position: fixed;
   top: 0;
-  background-color: ${props => (props.theme.header.backgroundColor)};
+  background-color: ${props => console.log(props) };
   z-index: 10;
 
   ${device.mobile} {
