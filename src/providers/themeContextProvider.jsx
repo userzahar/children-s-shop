@@ -1,7 +1,7 @@
 import { createContext, useState, useContext } from "react";
 import { dark, light } from "utils/theme";
 
-export const ThemeContext = createContext();
+const ThemeContext = createContext();
 
 export const ThemeContextProvider = ({children}) => {
     const [type, setType] = useState('light');
@@ -14,13 +14,15 @@ export const ThemeContextProvider = ({children}) => {
         } else if(type === 'dark') {
             setType('light');
             setTheme(light);
-        }
-        
-    }
+        };
+    };
 
-    return <ThemeContext.Provider value ={{theme, changeTheme}}>
-{children}
-    </ThemeContext.Provider>
+    return (
+        <ThemeContext.Provider value ={{theme, changeTheme}}>
+            {children}
+        </ThemeContext.Provider>
+    );
 };
 
-export const Theme = () => useContext(ThemeContext);
+export const Theme = () => useContext(ThemeContext).theme;
+export const ChangeTheme = () => useContext(ThemeContext).changeTheme;

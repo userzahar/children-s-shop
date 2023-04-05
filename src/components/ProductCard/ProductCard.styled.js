@@ -1,5 +1,5 @@
 import { device } from '../../utils/mediaQueries';
-//console.log('🚀 ~ device:', device);
+console.log('🚀 ~ device:', device);
 
 const { default: styled } = require('@emotion/styled');
 export const ProductCardContainer = styled.li`

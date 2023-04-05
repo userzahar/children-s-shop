@@ -1,15 +1,14 @@
 import PropTypes from 'prop-types';
 import { Button } from "./ThemeSwitcher.styled";
 import { BsSunFill } from 'react-icons/bs';
-import { useContext } from 'react';
-import { ThemeContext } from 'providers/themeContextProvider';
+import { ChangeTheme } from 'providers/themeContextProvider';
 
-export function ThemeSwitcher({themeSwitcher}) {
+export function ThemeSwitcher() {
 
-    const onClick = useContext(ThemeContext).changeTheme;
+    const onClick = ChangeTheme();
 
     return (
-        <Button onClick={onClick}><BsSunFill color="white" size={35}/></Button>
+        <Button onClick={onClick}><BsSunFill color="white" size={30}/></Button>
     );
 };
 

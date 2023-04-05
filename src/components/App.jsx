@@ -5,19 +5,16 @@ import { Footer } from "./Footer/Footer";
 import { GalleryProducts } from "./GalleryProducts/GalleryProducts";
 import { Main } from "./Main/Main";
 import { PageContainer } from "./pageContainer/pageContainer";
-import { useContext } from "react";
-import { Theme, ThemeContext } from "providers/themeContextProvider";
+import { Theme } from "providers/themeContextProvider";
 import { ThemeProvider } from "@emotion/react";
-import { light } from "utils/theme";
 
 export const App = () => {
-  const themeSwitcher = () => {
-    console.log('theme');
-  };
-const theme = useContext(ThemeContext).theme;
+
+const theme = Theme();
+
   return (<>
   <ThemeProvider theme={theme}>
-    <Header themeSwitcher={themeSwitcher}/>
+    <Header/>
 
     <Main>
       <PageContainer>
