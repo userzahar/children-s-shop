@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/children-s-shop/static/css/main.96678ec3.css",
-    "main.js": "/children-s-shop/static/js/main.93b47024.js",
+    "main.js": "/children-s-shop/static/js/main.dc215a5a.js",
     "static/media/children-s-background.png": "/children-s-shop/static/media/children-s-background.1e36fdf9aa2acfb0b4ba.png",
     "index.html": "/children-s-shop/index.html",
     "main.96678ec3.css.map": "/children-s-shop/static/css/main.96678ec3.css.map",
-    "main.93b47024.js.map": "/children-s-shop/static/js/main.93b47024.js.map"
+    "main.dc215a5a.js.map": "/children-s-shop/static/js/main.dc215a5a.js.map"
   },
   "entrypoints": [
     "static/css/main.96678ec3.css",
-    "static/js/main.93b47024.js"
+    "static/js/main.dc215a5a.js"
   ]
 }
