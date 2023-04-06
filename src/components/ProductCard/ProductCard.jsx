@@ -27,7 +27,7 @@ export function ProductCard({ data }) {
         <InfoCard>
             <p>{name}</p>
             {category.length !== 0 && <a href='/'> Категорії: {category.join(' ')}</a>}
-            <span>    {price} грн.</span>
+            <span>    {price} грн/шт</span>
         </InfoCard>
     </ProductCardContainer>
 }
