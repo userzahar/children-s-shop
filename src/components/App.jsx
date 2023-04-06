@@ -1,9 +1,9 @@
 
 import { goods } from "data/goods";
 import { Header } from "./Header/Header";
-import { Footer } from "./Footer/Footer";
 import { GalleryProducts } from "./GalleryProducts/GalleryProducts";
 import { Main } from "./Main/Main";
+import { Footer } from "./Footer/Footer";
 import { PageContainer } from "./pageContainer/pageContainer";
 import { Theme } from "providers/themeContextProvider";
 import { ThemeProvider } from "@emotion/react";
